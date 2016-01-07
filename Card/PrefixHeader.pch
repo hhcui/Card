@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  Card
+//
+//  Created by chh on 16/1/6.
+//  Copyright © 2016年 marc. All rights reserved.
+//
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "CHHColor.h"
+#import "UIColor+CardColor.h"
+#import "YYModel.h"
+#endif
+
+#ifdef CCQ
+#define LOG(...) NSLog(__VA_ARGS__);
+#define LOG_METHOD NSLog(@&quot;%s&quot;, __func__);
+#else
+#define LOG(...);
+
+#endif
